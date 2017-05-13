@@ -1,3 +1,7 @@
 Los pibes de Testing
+<<<<<<< HEAD
 Gorrudo, yuta, cobani, rati, fantasma, anti fiesta 
+=======
+edit mariano
+>>>>>>> dd6aee8982bed71c7c870e40402405af34a4257e
 Tomas Damonte UB Testing

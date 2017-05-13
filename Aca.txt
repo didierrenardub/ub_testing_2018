@@ -1,8 +1,5 @@
 Los pibes de Testing
-<<<<<<< HEAD
 escribir algo
-=======
 Gorrudo, yuta, cobani, rati, fantasma, anti fiesta 
->>>>>>> 5e171312c534fd8fcf511f8f969c0b83dfe5a0f3
 edit mariano
 Tomas Damonte UB Testing

@@ -3,20 +3,20 @@ package ar.edu.ub.testing2017.ConsoleWarriors;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class CCWMatch
+public class CMatch
 {
-    public CCWMatch(CCWPlayer p1, CCWPlayer p2, int abilityLimit)
+    public CMatch(CPlayer p1, CPlayer p2, int abilityLimit)
     {
         this.m_home = p1;
         this.m_away = p2;
     }
     
-    public CCWPlayer home()
+    public CPlayer home()
     {
         return this.m_home;
     }
     
-    public CCWPlayer away()
+    public CPlayer away()
     {
         return this.m_away;
     }
@@ -105,7 +105,7 @@ public class CCWMatch
         }
     }
 
-    public WARRIOR_ACTION validate(CConsoleWarrior warrior, WARRIOR_ACTION action)
+    public WARRIOR_ACTION validate(CWarrior warrior, WARRIOR_ACTION action)
     {
         if(warrior.status() == WARRIOR_STATUS.STUNNED || (warrior.status() == WARRIOR_STATUS.DIZZY && !m_random.nextBoolean()))
         {
@@ -115,7 +115,7 @@ public class CCWMatch
         return action;
     }
 
-    public void processAttack(CConsoleWarrior attacker, CConsoleWarrior defender, WARRIOR_ACTION defenderAction)
+    public void processAttack(CWarrior attacker, CWarrior defender, WARRIOR_ACTION defenderAction)
     {
         if(defenderAction == WARRIOR_ACTION.NONE)
         {
@@ -143,7 +143,7 @@ public class CCWMatch
         }
     }
 
-    public int greatestAbility(CConsoleWarrior w)
+    public int greatestAbility(CWarrior w)
     {
         int p = w.power();
         int h = w.health();
@@ -153,7 +153,7 @@ public class CCWMatch
         return Math.max(p, Math.max(h, Math.max(a, d)));
     }
 
-    public void attack(CConsoleWarrior attacker, CConsoleWarrior defender)
+    public void attack(CWarrior attacker, CWarrior defender)
     {
         boolean hit = m_random.nextInt(greatestAbility(attacker)) < attacker.accuracy();
         boolean avoid = defender.ability().id() == WARRIOR_ABILITY.AGILITY && m_random.nextInt(100) < 20;
@@ -247,8 +247,8 @@ public class CCWMatch
         return from.get(from.size() - 1);
     }
     
-    private CCWPlayer m_home;
-    private CCWPlayer m_away;
+    private CPlayer m_home;
+    private CPlayer m_away;
     private Random m_random = new Random();
 
     private final long WAIT_TIME = 500;

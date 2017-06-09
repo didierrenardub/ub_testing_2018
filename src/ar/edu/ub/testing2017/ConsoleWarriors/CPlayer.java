@@ -1,14 +1,14 @@
 package ar.edu.ub.testing2017.ConsoleWarriors;
 
-public class CCWPlayer
+public class CPlayer
 {
-    public CCWPlayer(String playerName, CConsoleWarrior warrior)
+    public CPlayer(String playerName, CWarrior warrior)
     {
         this.m_playerName = playerName;
         this.m_warrior = warrior;
     }
     
-    public CConsoleWarrior warrior()
+    public CWarrior warrior()
     {
         return this.m_warrior;
     }
@@ -34,6 +34,6 @@ public class CCWPlayer
     }
     
     private String m_playerName;
-    private CConsoleWarrior m_warrior;
+    private CWarrior m_warrior;
     private int m_points;
 }

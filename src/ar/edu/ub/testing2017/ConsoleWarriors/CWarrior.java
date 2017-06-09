@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  Created by Didier on 21/10/2016.
  */
-public abstract class CConsoleWarrior
+public abstract class CWarrior
 {
     abstract public String name();
     abstract public int power();
@@ -13,9 +13,9 @@ public abstract class CConsoleWarrior
     abstract public int accuracy();
     abstract public int defense();
     abstract public CWarriorAbility ability();
-    abstract public WARRIOR_ACTION action(CConsoleWarrior opponent, ArrayList<WARRIOR_ACTION> opponentActions);
+    abstract public WARRIOR_ACTION action(CWarrior opponent, ArrayList<WARRIOR_ACTION> opponentActions);
     
-    public CConsoleWarrior(int abilityPoints)
+    public CWarrior(int abilityPoints)
     {
         this.m_totalAbilityPoints = abilityPoints;
         this.m_status = WARRIOR_STATUS.NORMAL;

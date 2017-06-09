@@ -6,14 +6,14 @@ import java.util.Random;
 /**
  * Created by Didier on 21/10/2016.
  */
-public class CConsoleWarriorBot extends CConsoleWarrior
+public class CWarriorBot extends CWarrior
 {
-    public CConsoleWarriorBot(int abilityPoints)
+    public CWarriorBot(int abilityPoints)
     {
         this("Megatron", abilityPoints);
     }
 
-    public CConsoleWarriorBot(String warriorName, int abilityPoints)
+    public CWarriorBot(String warriorName, int abilityPoints)
     {
         super(abilityPoints);
 
@@ -76,7 +76,7 @@ public class CConsoleWarriorBot extends CConsoleWarrior
         return m_ability;
     }
 
-    public WARRIOR_ACTION action(CConsoleWarrior opponent, ArrayList<WARRIOR_ACTION> opponentMoves)
+    public WARRIOR_ACTION action(CWarrior opponent, ArrayList<WARRIOR_ACTION> opponentMoves)
     {
         if(new Random().nextBoolean())
         {

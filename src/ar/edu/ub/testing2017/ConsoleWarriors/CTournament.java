@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class CCWTournament
+public class CTournament
 {
-    public CCWTournament(int abilityPoints)
+    public CTournament(int abilityPoints)
     {
-        m_players = new ArrayList<CCWPlayer>();
-        m_matches = new ArrayList<CCWMatch>();
+        m_players = new ArrayList<CPlayer>();
+        m_matches = new ArrayList<CMatch>();
         m_abilityPoints = abilityPoints;
     }
 
@@ -18,7 +18,7 @@ public class CCWTournament
         return m_abilityPoints;
     }
     
-    public void addPlayer(CCWPlayer player)
+    public void addPlayer(CPlayer player)
     {
         if(player == null)
         {
@@ -45,24 +45,24 @@ public class CCWTournament
         {
             for(int j = i + 1; j < m_players.size(); j++)
             {
-                m_matches.add(new CCWMatch(m_players.get(i), m_players.get(j), m_abilityPoints));
+                m_matches.add(new CMatch(m_players.get(i), m_players.get(j), m_abilityPoints));
             }
         }
         
         Collections.shuffle(m_matches, new Random(System.nanoTime()));
         
-        for(CCWMatch m : m_matches)
+        for(CMatch m : m_matches)
         {
             m.play();
         }
         
-        for(CCWPlayer p : m_players)
+        for(CPlayer p : m_players)
         {
             System.out.println(p.playerName() + ": " + p.points() + " points");
         }
     }
     
-    private ArrayList<CCWPlayer> m_players;
-    private ArrayList<CCWMatch> m_matches;
+    private ArrayList<CPlayer> m_players;
+    private ArrayList<CMatch> m_matches;
     private int m_abilityPoints;
 }

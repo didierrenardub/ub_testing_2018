@@ -1,5 +1,9 @@
 package ar.edu.ub.testing2017;
 
+import ar.edu.ub.testing2017.ConsoleWarriors.CCWPlayer;
+import ar.edu.ub.testing2017.ConsoleWarriors.CCWTournament;
+import ar.edu.ub.testing2017.ConsoleWarriors.CConsoleWarriorBot;
+
 public class CMain
 {
     private CMain()

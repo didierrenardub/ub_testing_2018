@@ -29,6 +29,28 @@ public abstract class CWarrior
             return false;
         }
         
+        int value = -1;
+        for(int i = 0; i < 10; i++)
+        {
+            if(value != -1 && value != power())
+            {
+                return false;
+            }
+            
+            value = power();
+        }
+        
+        CWarriorAbility a = this.ability();
+        for(int i = 0; i < 10; i++)
+        {
+            if(a != this.ability())
+            {
+                return false;
+            }
+            
+            a = this.ability();
+        }
+        
         return (power() + health() + accuracy() + defense() + ability().cost()) == m_totalAbilityPoints;
     }
 

@@ -25,30 +25,53 @@ public class CMatch
         
         for(int i = 0; i < 2; i++)
         {
-            this.m_homeDeck.add(new CCard(this.m_home.name(), 27));
-            this.m_awayDeck.add(new CCard(this.m_away.name(), 27));
+            this.addUniqueCard(this.m_homeDeck, this.m_home.name(), 27);
+            this.addUniqueCard(this.m_awayDeck, this.m_away.name(), 27);
         }
     
         for(int i = 0; i < 4; i++)
         {
-            this.m_homeDeck.add(new CCard(this.m_home.name(), 24));
-            this.m_awayDeck.add(new CCard(this.m_away.name(), 24));
+            this.addUniqueCard(this.m_homeDeck, this.m_home.name(), 24);
+            this.addUniqueCard(this.m_awayDeck, this.m_away.name(), 24);
         }
     
         for(int i = 0; i < 4; i++)
         {
-            this.m_homeDeck.add(new CCard(this.m_home.name(), 21));
-            this.m_awayDeck.add(new CCard(this.m_away.name(), 21));
+            this.addUniqueCard(this.m_homeDeck, this.m_home.name(), 21);
+            this.addUniqueCard(this.m_awayDeck, this.m_away.name(), 21);
         }
     
         for(int i = 0; i < 5; i++)
         {
-            this.m_homeDeck.add(new CCard(this.m_home.name(), 16));
-            this.m_awayDeck.add(new CCard(this.m_away.name(), 16));
+            this.addUniqueCard(this.m_homeDeck, this.m_home.name(), 16);
+            this.addUniqueCard(this.m_awayDeck, this.m_away.name(), 16);
         }
     
         Collections.shuffle(m_homeDeck, new Random(System.nanoTime()));
         Collections.shuffle(m_awayDeck, new Random(System.nanoTime()));
+    }
+
+    public void addUniqueCard(ArrayList<CCard> toList, String owner, int points)
+    {
+        CCard toAdd = new CCard(owner, points);
+        while(!this.addUnique(toList, toAdd))
+        {
+            toAdd = new CCard(owner, points);
+        }
+    }
+
+    public boolean addUnique(ArrayList<CCard> toList, CCard card)
+    {
+        for(CCard c : toList)
+        {
+            if(c.equals(card))
+            {
+                return false;
+            }
+        }
+
+        toList.add(card);
+        return true;
     }
     
     public void play()
@@ -94,6 +117,8 @@ public class CMatch
                 this.m_turn = this.m_home;
             }
         }
+
+        this.m_board.print();
         
         CPlayer winner = this.m_away;
         if(this.m_home.currentFlips() > this.m_away.currentFlips())

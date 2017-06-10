@@ -72,6 +72,11 @@ public class CCard
             }
         }
     }
+
+    public boolean equals(CCard other)
+    {
+        return this.up() == other.up() && this.down() == other.down() && this.left() == other.left() && this.right() == other.right() && this.owner().equalsIgnoreCase(other.owner());
+    }
     
     public int up()
     {

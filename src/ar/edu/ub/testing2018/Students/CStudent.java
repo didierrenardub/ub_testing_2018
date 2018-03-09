@@ -79,8 +79,8 @@ public abstract class CStudent implements IStudent
         return 0;
     }
     
-    public IStudent gradeClass(int classNumber, int attendance, int permanence, int mandatoryTaskPresentation,
-                        int mandatoryTaskGrade, int optionalTaskPresentation, int optionalTaskGrade, int question)
+    public IStudent gradeClass(final int classNumber, final int attendance, final int permanence, final int mandatoryTaskPresentation,
+                               final int mandatoryTaskGrade, final int optionalTaskPresentation, final int optionalTaskGrade, final int question)
     {
         if(m_grades.containsKey(classNumber))
         {

@@ -20,7 +20,7 @@ public class CBoard
         
         for(int x = 0; x < width; x++)
         {
-            this.m_board.add(new ArrayList<>());
+            this.m_board.add(new ArrayList<CCard>());
             for(int y = 0; y < height; y++)
             {
                 this.m_board.get(x).add(null);

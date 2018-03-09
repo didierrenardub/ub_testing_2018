@@ -1,4 +1,4 @@
-package ar.edu.ub.testing2017.Flipboard;
+package ar.edu.ub.testing2018.Flipboard;
 
 import java.util.List;
 

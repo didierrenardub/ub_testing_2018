@@ -1,4 +1,4 @@
-package ar.edu.ub.testing2017.ConsoleWarriors;
+package ar.edu.ub.testing2018.ConsoleWarriors;
 
 import java.util.ArrayList;
 import java.util.Random;

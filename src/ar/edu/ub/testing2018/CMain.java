@@ -5,6 +5,7 @@ import ar.edu.ub.testing2018.ConsoleWarriors.CTournament;
 import ar.edu.ub.testing2018.ConsoleWarriors.CWarriorBot;
 import ar.edu.ub.testing2018.Flipboard.CFlipBot;
 import ar.edu.ub.testing2018.Students.CStudentStatistics;
+import ar.edu.ub.testing2018.Students.CStudentStatistics2018;
 import ar.edu.ub.testing2018.Students.IStudent;
 
 import java.util.Scanner;
@@ -13,7 +14,7 @@ public class CMain
 {
     private CMain()
     {
-        this.m_stats = new CStudentStatistics();
+        this.m_stats = new CStudentStatistics2018();
     }
     
     private CStudentStatistics stats()
@@ -64,6 +65,8 @@ public class CMain
         CTournament t = new CTournament(100);
         t.addPlayer(new CPlayer("Greiner", new CWarriorBot(t.maxAbility())));
         t.addPlayer(new CPlayer("Aguilera", new CWarriorBot("Optimus", t.maxAbility())));
+        t.addPlayer(new CPlayer("Wittbecker", new CWarriorBot("Vader", t.maxAbility())));
+        t.addPlayer(new CPlayer("Aldegani", new CWarriorBot("Luke", t.maxAbility())));
         t.play();
     }
     
@@ -72,6 +75,8 @@ public class CMain
         ar.edu.ub.testing2018.Flipboard.CTournament t = new ar.edu.ub.testing2018.Flipboard.CTournament();
         t.addPlayer(new CFlipBot("Aguilera"));
         t.addPlayer(new CFlipBot("Greiner"));
+        t.addPlayer(new CFlipBot("Wittbecker"));
+        t.addPlayer(new CFlipBot("Aldegani"));
         t.play();
     }
 

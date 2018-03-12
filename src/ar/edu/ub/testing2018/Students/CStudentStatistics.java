@@ -21,8 +21,9 @@ public class CStudentStatistics
      *
      * @param student The student to be added.
      */
-    public void addStudent(IStudent student) {
+    public IStudent addStudent(IStudent student) {
         m_students.add(student);
+        return student;
     }
 
     /**

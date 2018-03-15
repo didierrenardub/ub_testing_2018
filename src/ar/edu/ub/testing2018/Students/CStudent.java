@@ -39,10 +39,15 @@ public abstract class CStudent implements IStudent
         {
             for(int i = 0; i < grades.getValue().size(); i++)
             {
-                if(grades.getValue().get(i) != 0)
+                int grade = grades.getValue().get(i);
+                if(grade != 0)
                 {
                     gradables++;
-                    average += grades.getValue().get(i);
+                    if(grade > 10)
+                    {
+                        grade /= 10;
+                    }
+                    average += grade;
                 }
             }
         }

@@ -22,7 +22,7 @@ public class CStudentStatistics2018 extends CStudentStatistics
         gabl.gradeClass(0, 30, 0, 0, 0, 0, 0, 0);
         gabe.gradeClass(0, 30, 0, 0, 0, 0, 0, 0);
         seba.gradeClass(0, 0, 0, 0, 0, 0, 0, 0);
-        pedr.gradeClass(0, 0, 0, 0, 0, 0, 0, 0);
+        pedr.gradeClass(0, 20, 0, 0, 0, 0, 0, 0);
 
         // Class 1
         alex.gradeClass(1, 10, 10, 0, 0, 0, 0, 0);
@@ -30,8 +30,8 @@ public class CStudentStatistics2018 extends CStudentStatistics
         walt.gradeClass(1, 10, 10, 0, 0, 0, 0, 0);
         gabl.gradeClass(1, 10, 10, 0, 0, 0, 0, 0);
         gabe.gradeClass(1, 10, 10, 0, 0, 0, 0, 0);
-        seba.gradeClass(1, 1, 1, 0, 0, 0, 0, 0);
-        pedr.gradeClass(1, 1, 1, 0, 0, 0, 0, 0);
+        seba.gradeClass(1, 1, 10, 0, 0, 0, 0, 0);
+        pedr.gradeClass(1, 1, 10, 0, 0, 0, 0, 0);
 
         // Class 2
         alex.gradeClass(2, 10, 10, 10, 10, 10, 10, 6);
@@ -43,12 +43,21 @@ public class CStudentStatistics2018 extends CStudentStatistics
         pedr.gradeClass(2, 10, 10, 10, 10, 0, 0, 1);
 
         // Class 3
-        alex.gradeClass(3, 0, 0, 0, 0, 0, 0, 0);
-        ferr.gradeClass(3, 0, 0, 0, 0, 0, 0, 0);
-        walt.gradeClass(3, 0, 0, 0, 0, 10, 10, 0);
-        gabl.gradeClass(3, 0, 0, 0, 0, 0, 0, 0);
-        gabe.gradeClass(3, 0, 0, 0, 0, 10, 10, 0);
-        seba.gradeClass(3, 0, 0, 0, 0, 0, 0, 0);
-        pedr.gradeClass(3, 0, 0, 0, 0, 0, 0, 0);
+        alex.gradeClass(3, 10, 0, 10, 10, 10, 10, 7);
+        ferr.gradeClass(3, 10, 0, 10, 10, 10, 10, 10);
+        walt.gradeClass(3, 10, 0, 10, 10, 10, 10, 10);
+        gabl.gradeClass(3, 10, 0, 1, 1, 0, 0, 1);
+        gabe.gradeClass(3, 10, 0, 10, 10, 10, 10, 10);
+        seba.gradeClass(3, 10, 0, 4, 4, 0, 0, 1);
+        pedr.gradeClass(3, 1, 0, 10, 10, 0, 0, 1);
+
+        // Class 4
+        alex.gradeClass(4, 0, 0, 0, 0, 0, 0, 0);
+        ferr.gradeClass(4, 0, 0, 10, 10, 0, 0, 0);
+        walt.gradeClass(4, 0, 0, 10, 10, 10, 10, 0);
+        gabl.gradeClass(4, 0, 0, 0, 0, 0, 0, 0);
+        gabe.gradeClass(4, 0, 0, 10, 10, 0, 0, 0);
+        seba.gradeClass(4, 0, 0, 0, 0, 0, 0, 0);
+        pedr.gradeClass(4, 0, 0, 0, 0, 0, 0, 0);
     }
 }

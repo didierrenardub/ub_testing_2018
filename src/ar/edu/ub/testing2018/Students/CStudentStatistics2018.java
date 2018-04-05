@@ -43,12 +43,12 @@ public class CStudentStatistics2018 extends CStudentStatistics
         pedr.gradeClass(2, 10, 10, 10, 10, 0, 0, 1);
 
         // Class 3
-        alex.gradeClass(3, 10, 0, 10, 10, 10, 10, 7);
-        ferr.gradeClass(3, 10, 0, 10, 10, 10, 10, 10);
-        walt.gradeClass(3, 10, 0, 10, 10, 10, 10, 10);
-        gabl.gradeClass(3, 10, 0, 1, 1, 0, 0, 1);
-        gabe.gradeClass(3, 10, 0, 10, 10, 10, 10, 10);
-        seba.gradeClass(3, 10, 0, 4, 4, 0, 0, 1);
+        alex.gradeClass(3, 10, 10, 10, 10, 10, 10, 7);
+        ferr.gradeClass(3, 10, 10, 10, 10, 10, 10, 10);
+        walt.gradeClass(3, 10, 10, 10, 10, 10, 10, 10);
+        gabl.gradeClass(3, 10, 10, 1, 1, 0, 0, 1);
+        gabe.gradeClass(3, 10, 10, 10, 10, 10, 10, 10);
+        seba.gradeClass(3, 10, 10, 4, 4, 0, 0, 1);
         pedr.gradeClass(3, 1, 0, 10, 10, 0, 0, 1);
 
         // Class 4
